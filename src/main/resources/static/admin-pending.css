@@ -1,85 +1,172 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Theme colors */
+:root {
+  --bg-dark: #121212;
+  --bg-light: #1e1e1e;
+  --primary: #ff9933;  /* saffron orange */
+  --accent: #29abe2;   /* blue */
+  --text-light: #f5f5f5;
+  --text-muted: #aaa;
+}
+
+/* Body */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f5f5f7;
-    color: #1d1d1f;
-  }
-  
-  .navbar {
-    background: #fff;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .logo span {
-    color: #0071e3;
-  }
-  
-  .container {
-    max-width: 95%;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #d2d2d7;
-  }
-  th {
-    background: #f5f5f7;
-  }
-  a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #0071e3;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  button {
-    padding: 8px 12px;
-    margin: 3px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  .approve {
-    background: #34c759;
-    color: white;
-  }
-  .reject {
-    background: #ff3b30;
-    color: white;
-  }
-  button:hover {
-    opacity: 0.9;
-  }
-  
-  .message {
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+  background: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--bg-light);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  margin-left: 20px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Container */
+.container {
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+thead {
+  background: #1a1a1a;
+}
+
+thead th {
+  padding: 14px 12px;
+  text-align: left;
+  color: var(--accent);
+  font-size: 0.95rem;
+  border-bottom: 2px solid #333;
+}
+
+tbody tr {
+  transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: #181818;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #222;
+}
+
+tbody tr:hover {
+  background: rgba(255, 153, 51, 0.15);
+}
+
+/* File link */
+tbody td a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+tbody td a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Actions buttons */
+.actions-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.actions-btn button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.actions-btn .approve {
+  background: #28a745;
+  color: #fff;
+}
+
+.actions-btn .approve:hover {
+  background: #218838;
+}
+
+.actions-btn .reject {
+  background: #dc3545;
+  color: #fff;
+}
+
+.actions-btn .reject:hover {
+  background: #c82333;
+}
+
+/* Message Box */
+.message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  min-height: 24px;
+  color: var(--accent);
+}

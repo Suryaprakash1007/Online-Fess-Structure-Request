@@ -4,7 +4,7 @@ async function loadDashboardCounts() {
         fetch("http://localhost:8081/api/students/pending"),
         fetch("http://localhost:8081/api/students/approved"),
         fetch("http://localhost:8081/api/students/rejected"),
-        fetch("http://localhost:8081/api/students/users") // you may need to implement this in backend
+        fetch("http://localhost:8081/api/details") // you may need to implement this in backend
       ]);
   
       const pending = await pendingRes.json();

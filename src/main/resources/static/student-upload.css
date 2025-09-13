@@ -1,75 +1,100 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Colors */
+:root {
+  --bg-dark: #121212;
+  --bg-light: #1e1e1e;
+  --primary: #ff9933;
+  --accent: #29abe2;
+  --green: #28a745;
+  --red: #dc3545;
+  --text-light: #f5f5f5;
+  --text-muted: #aaa;
+}
+
+/* Body */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f5f5f7;
-    color: #1d1d1f;
-  }
-  
-  .navbar {
-    background: #fff;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .logo span {
-    color: #0071e3;
-  }
-  
-  .container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #d2d2d7;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    background: #0071e3;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  button:hover {
-    background: #005bb5;
-  }
-  
-  .message {
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #222;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* File input */
+input[type="file"] {
+  padding: 6px;
+  background: #2a2a2a;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff7a00;
+}
