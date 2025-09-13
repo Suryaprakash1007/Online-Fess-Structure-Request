@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Fees Portal</title>
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Fees<span>Portal</span></h2>
+      <nav>
+        <ul>
+          <li><a href="admin-pending.html">📋 Pending</a></li>
+          <li><a href="approved.html">Approved</a></li>
+          <li><a href="rejected.html">Rejected</a></li>
+          <li><a href="userinfo.html">User Info</a></li>
+          <li><a href="createuser.html">Create User</a></li>
+          <li><a href="login.html" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header>
+        <h1>Welcome, Admin</h1>
+        <p>Manage student requests and user accounts</p>
+      </header>
+
+      <section class="cards">
+        <div class="card pending">
+          <h3>Pending Requests</h3>
+          <p id="pendingCount">0</p>
+        </div>
+        <div class="card approved">
+          <h3>Approved</h3>
+          <p id="approvedCount">0</p>
+        </div>
+        <div class="card rejected">
+          <h3>Rejected</h3>
+          <p id="rejectedCount">0</p>
+        </div>
+        <div class="card users">
+          <h3>Total Users</h3>
+          <p id="userCount">0</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admindashboard.js"></script>
+</body>
+</html>

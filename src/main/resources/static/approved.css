@@ -1,0 +1,10 @@
+@import url('admin-pending.css');
+
+h2 {
+  color: #34c759;
+}
+
+tr td:nth-child(7) {
+  font-weight: bold;
+  color: #34c759;
+}

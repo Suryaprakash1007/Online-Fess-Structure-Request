@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info | Admin Dashboard</title>
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Fees<span>Portal</span></h2>
+      <nav>
+        <ul>
+          <li><a href="admin-pending.html">📋 Pending</a></li>
+          <li><a href="approved.html">✅ Approved</a></li>
+          <li><a href="rejected.html">❌ Rejected</a></li>
+          <li><a href="userinfo.html" class="active">👤 User Info</a></li>
+          <li><a href="createuser.html">➕ Create User</a></li>
+          <li><a href="login.html" class="logout">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="header-bar">
+        <div>
+        <h1>All Users</h1>
+        <p>Manage registered students</p>
+        </div>
+        <input type="text" id="searchBar" placeholder="Search by name, roll no, email..." onkeyup="filterUsers()">
+
+      </header>
+      
+      <section>
+        <table id="usersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>Year</th>
+              <th>Course</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filled dynamically -->
+          </tbody>
+        </table>
+      </section>
+     
+    </main>
+  </div>
+
+  <script src="userinfo.js"></script>
+</body>
+</html>

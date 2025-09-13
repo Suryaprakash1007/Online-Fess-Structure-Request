@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Fees Portal</title>
+  <link rel="stylesheet" href="admin-pending.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Fees<span>Portal</span></div>
+    <nav>
+      <a href="approved.html">Approved</a>
+      <a href="rejected.html">Rejected</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Pending Requests</h1>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Year</th>
+          <th>Course</th>
+          <th>Email</th>
+          <th>Reason</th>
+          <th>File</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be added dynamically -->
+      </tbody>
+    </table>
+    <div id="message" class="message"></div>
+  </main>
+
+  <script src="admin-pending.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="studentdasboard.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Welcome, Student</h1>
+
+    <div class="card">
+      <h2>Available Actions</h2>
+      <div class="actions">
+        <button onclick="window.location.href='student-upload.html'">➕ Request Fee Structure</button>
+
+<!-- Status Display -->
+
+        <button onclick="logout()">🚪 Logout</button>
+      </div>
+    </div>
+
+    <div id="requestsSection" class="card" style="display:none;">
+      <h2>📄 My Requests</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>File</th>
+          </tr>
+        </thead>
+        <tbody id="requestTable">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="studentdashboard.js"></script>
+</body>
+</html>

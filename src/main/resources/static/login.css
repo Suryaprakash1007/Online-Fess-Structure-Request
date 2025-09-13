@@ -1,0 +1,141 @@
+/* Amazon-inspired CSS for Login Page */
+:root {
+    --amazon-dark: #131921;
+    --amazon-orange: #ff9900;
+    --amazon-light: #232f3e;
+    --amazon-gray: #eaeded;
+    --amazon-text: #111;
+    --amazon-text-light: #ccc;
+    --amazon-price: #b12704;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--amazon-gray);
+    color: var(--amazon-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--amazon-orange);
+}
+
+.logo {
+    text-align: center;
+    color: var(--amazon-dark);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Form Styles */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#loginForm select,
+#loginForm input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#loginForm select:focus,
+#loginForm input:focus {
+    outline: none;
+    border-color: var(--amazon-orange);
+    box-shadow: 0 0 0 2px rgba(255,153,0,0.2);
+}
+
+#loginForm button[type="submit"] {
+    background-color: var(--amazon-orange);
+    color: var(--amazon-dark);
+    border: none;
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: #ff8800;
+}
+
+#back-btn {
+    background-color: #f0f0f0;
+    color: var(--amazon-text);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+#back-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.error {
+    color: #c40000;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Additional Amazon-like elements */
+.login-card::before {
+    content: "";
+    display: block;
+    height: 44px;
+    margin: -30px -30px 20px -30px;
+    background-color: var(--amazon-dark);
+    border-radius: 4px 4px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+    
+    .login-card::before {
+        margin: -20px -20px 20px -20px;
+    }
+}

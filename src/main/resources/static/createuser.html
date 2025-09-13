@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create User | Admin Dashboard</title>
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Fees<span>Portal</span></h2>
+      <nav>
+        <ul>
+          <li><a href="admin-pending.html">📋 Pending</a></li>
+          <li><a href="approved.html">✅ Approved</a></li>
+          <li><a href="rejected.html">❌ Rejected</a></li>
+          <li><a href="userinfo.html">👤 User Info</a></li>
+          <li><a href="createuser.html" class="active">➕ Create User</a></li>
+          <li><a href="login.html" class="logout">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header>
+        <h1>Create New User</h1>
+        <p>Register a new student account</p>
+      </header>
+
+      <form id="createUserForm" class="form-card">
+        <label>Roll No</label>
+        <input type="text" id="rollno" required>
+      
+        <label>Name</label>
+        <input type="text" id="name" required>
+      
+        <label>Email</label>
+        <input type="email" id="email" required>
+      
+        <label>Password</label>
+        <input type="password" id="password" required>
+      
+        <label>Department</label>
+        <select id="department" required>
+          <option value="">--Select Department--</option>
+          <option value="IT">IT</option>
+          <option value="CSE">CSE</option>
+          <option value="MECH">MECH</option>
+          <option value="ECE">ECE</option>
+          <option value="BME">BME</option>
+          <option value="AIDS">AIDS</option>
+          <option value="CSBS">CSBS</option>
+          <option value="EEE">EEE</option>
+        </select>
+      
+        <label>Year</label>
+        <select id="year" required>
+          <option value="">--Select Year--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      
+        <label>Course</label>
+        <select id="course" required>
+          <option value="">--Select Course--</option>
+          <option value="BE">BE</option>
+          <option value="BTech">BTech</option>
+        </select>
+      
+        <label>Role</label>
+        <select id="role">
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+        </select>
+      
+        <button type="submit">Create</button>
+      </form>
+      
+    </main>
+  </div>
+
+  <script src="createuser.js"></script>
+</body>
+</html>

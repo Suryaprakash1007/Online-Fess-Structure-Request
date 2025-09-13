@@ -1,0 +1,228 @@
+/* === Apple Inspired Glass Dashboard === */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #dfe9f3);
+    color: #1d1d1f;
+  }
+  
+  /* === Layout === */
+  .dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* === Sidebar === */
+  .sidebar {
+    width: 240px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(200, 200, 200, 0.4);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #111;
+    letter-spacing: -0.5px;
+  }
+  
+  .logo span {
+    color: #0071e3;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 18px 0;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    padding: 12px 15px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.25s ease;
+  }
+  
+  .sidebar nav ul li a:hover,
+  .sidebar nav ul li a.active {
+    background: #0071e3;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,113,227,0.3);
+  }
+  
+  .logout {
+    color: #ff3b30 !important;
+    font-weight: 600;
+  }
+  
+  /* === Main Content === */
+  .content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  
+  header h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  
+  header p {
+    color: #6e6e73;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  /* === Glass Cards === */
+  .card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  
+  /* === Table === */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  table thead {
+    background: rgba(240,240,240,0.7);
+  }
+  
+  table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  table tr {
+    transition: background 0.2s;
+  }
+  
+  table tr:hover {
+    background: rgba(0,0,0,0.03);
+  }
+  
+  .delete-btn {
+    background: #ff3b30;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .edit-btn {
+    background: #3a07f5;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  /* Header layout */
+.header-bar {
+    display: flex;
+    justify-content: space-between; /* left title, right search */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search bar styling */
+  #searchBar {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    width: 250px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  #searchBar:focus {
+    border-color: #0071e3; /* Apple blue */
+    box-shadow: 0 0 6px rgba(0, 113, 227, 0.5);
+    width: 300px;
+  }
+  
+  .delete-btn:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+  }
+  
+  /* === Form === */
+  .form-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    max-width: 520px;
+  }
+  
+  .form-card label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-card input,
+  .form-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.9);
+    transition: border 0.2s;
+  }
+  
+  .form-card input:focus,
+  .form-card select:focus {
+    border: 1px solid #0071e3;
+    outline: none;
+  }
+  
+  .form-card button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #0071e3;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .form-card button:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+  }
+  

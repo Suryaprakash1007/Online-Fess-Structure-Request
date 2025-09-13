@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Fees Portal</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <h1 class="logo">Fees Portal</h1>
+      <p class="subtitle">Sign in to continue</p>
+
+      <form id="loginForm">
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="student">student</option>
+        </select>
+
+        <input type="text" id="username" placeholder="Username / Roll No" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+      </form>
+      <br>
+      <button id="back-btn">Back</button>
+      <br>
+      <p id="error" class="error"></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Upload | Fees Portal</title>
+  <link rel="stylesheet" href="student-upload.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Student Document</h1>
+
+    <form id="studentForm">
+      <label>Roll No</label>
+      <input type="text" id="rollno" name="rollno" required>
+
+      <label>ID</label>
+      <input type="text" id="id" name="id" readonly>
+
+      <label>Name</label>
+      <input type="text" id="name" name="name" readonly>
+
+      <label>Email</label>
+      <input type="email" id="email" name="email" readonly>
+
+      <label>Department</label>
+      <input type="text" id="department" name="department" readonly>
+
+      <label>Year</label>
+      <input type="text" id="year" name="year" readonly>
+
+      <label>Course</label>
+      <input type="text" id="course" name="course" readonly>
+      <label for="reason">Reason:</label>
+<textarea id="reason" name="reason" rows="5" cols="40" placeholder="Enter your reason here..."></textarea>
+
+
+      <label>Upload File</label>
+      <input type="file" id="file" name="file" required>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script src="student-upload.js"></script>
+</body>
+</html>
