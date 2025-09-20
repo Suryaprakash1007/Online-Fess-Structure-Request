@@ -8,7 +8,7 @@ import com.fees.demo.model.Studentdetailmodel;
 
 @Repository
 public interface Studentdetailrepo extends JpaRepository<Studentdetailmodel, Long> {
-    List<Studentdetailmodel> findByStatus(String status);
+    List<Studentdetailmodel> findByStatus(String status);
 
-    List<Studentdetailmodel> findByRollno(String rollno); // ✅ FIXED
+    List<Studentdetailmodel> findByRollno(String rollno); // ✅ FIXED
 }
