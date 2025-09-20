@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!rollno) return;
 
     try {
-      const res = await fetch(`http://localhost:8081/api/rollno/${rollno}`);
+      const res = await fetch(`https://online-fess-structure-request-8.onrender.com//api/rollno/${rollno}`);
       if (!res.ok) {
         alert("Student not found!");
         studentForm.reset();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(studentForm);
 
     try {
-      const res = await fetch("http://localhost:8081/api/students/upload", {
+      const res = await fetch("https://online-fess-structure-request-8.onrender.com//api/students/upload", {
         method: "POST",
         body: formData
       });

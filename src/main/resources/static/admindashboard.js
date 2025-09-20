@@ -1,10 +1,10 @@
 async function loadDashboardCounts() {
     try {
       const [pendingRes, approvedRes, rejectedRes, usersRes] = await Promise.all([
-        fetch("http://localhost:8081/api/students/pending"),
-        fetch("http://localhost:8081/api/students/approved"),
-        fetch("http://localhost:8081/api/students/rejected"),
-        fetch("http://localhost:8081/api/details") // you may need to implement this in backend
+        fetch("https://online-fess-structure-request-8.onrender.com/api/students/pending"),
+        fetch("https://online-fess-structure-request-8.onrender.com/api/students/approved"),
+        fetch("https://online-fess-structure-request-8.onrender.com/api/students/rejected"),
+        fetch("https://online-fess-structure-request-8.onrender.com/api/details") // you may need to implement this in backend
       ]);
   
       const pending = await pendingRes.json();

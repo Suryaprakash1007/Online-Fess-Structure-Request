@@ -12,13 +12,13 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     let response;
 
     if (role === "admin") {
-      response = await fetch("http://localhost:8081/admin/login", {
+      response = await fetch("https://online-fess-structure-request-8.onrender.com/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
     } else if (role === "student") {
-      response = await fetch("http://localhost:8081/api/login", {
+      response = await fetch("https://online-fess-structure-request-8.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rollno: username, password }),
